@@ -5,7 +5,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/gerred/kluster/vendor/github.com/spf13/cobra"
+	"github.com/spf13/cobra"
 )
 
 var driver string
@@ -23,6 +23,10 @@ var createCmd = &cobra.Command{
 
 		log.Printf("Creating cluster %s using driver %s.", name, driver)
 		os.MkdirAll(path.Join(home, ".kluster", name), 0755)
+
+		log.Printf("Creating etcd node 1")
+		log.Printf("Creating etcd node 2")
+		log.Printf("Creating etcd node 3")
 	},
 }
 
